@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GSAP initial states — set before JS runs to avoid flash */
+.gsap-hero-content > * {
+  will-change: transform, opacity;
+}
+
+.gsap-hero-image {
+  will-change: transform, opacity;
+}
+
+.gsap-product-card,
+.gsap-benefit-card,
+.gsap-testimonial,
+.gsap-newsletter,
+.gsap-about-image,
+.gsap-about-content {
+  will-change: transform, opacity;
+}
+
+/* Subtle hover transitions */
+.product-card-hover {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.product-card-hover:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.btn-primary-hover {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary-hover:hover {
+  background: #1a1a1a;
+}
+
+.btn-secondary-hover {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary-hover:hover {
+  background: #2a2a2a;
+  color: white;
+}
+
+.add-to-cart-hover {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart-hover:hover {
+  background: #2a2a2a;
+  color: white;
+}
+
+.social-icon-hover {
+  transition: background 0.3s ease;
+}
+
+.social-icon-hover:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Newsletter input placeholder */
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Smooth nav shadow */
+.nav-scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
